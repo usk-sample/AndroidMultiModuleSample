@@ -1,9 +1,15 @@
+enableFeaturePreview("VERSION_CATALOGS")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
+    }
+    versionCatalogs {
+        libs {
+            alias("core-ktx").to("androidx.core:core-ktx:1.7.0")
+        }
     }
 }
 rootProject.name = "AndroidMultiModuleSample"
