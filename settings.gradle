@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AndroidMultiModuleSample"
 include ':app'
+include ':Infrastructure'
+include ':Domain'
