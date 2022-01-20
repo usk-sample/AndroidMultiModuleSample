@@ -1,4 +1,4 @@
 package com.example.infrastructure.api
 
-class Api {
+public class Api {
 }

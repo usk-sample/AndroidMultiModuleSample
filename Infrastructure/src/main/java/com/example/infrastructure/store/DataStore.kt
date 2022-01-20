@@ -1,4 +1,4 @@
 package com.example.infrastructure.store
 
-class DataStore {
+public class DataStore {
 }
