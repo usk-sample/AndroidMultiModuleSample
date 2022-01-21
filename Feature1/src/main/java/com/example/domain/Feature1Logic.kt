@@ -9,15 +9,15 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import java.lang.Exception
 
-class Feature1Logic(
-    private val api: Api = Api(),
-    private val store: DataStore = DataStore()
-) {
+class Feature1Logic{
 
-    fun listRepos(user: String): Flow<List<RepoModel>> {
+    private val api: Api = Api()
+    private val store: DataStore = DataStore()
+
+    suspend fun listRepos(user: String): Flow<List<RepoModel>> {
         return flow {
             try {
-                emit(api.service.listRepos(user).execute().body()!!.map { RepoTranslator.convert(it) })
+                emit(api.service.listRepos(user).map { RepoTranslator.convert(it) })
             } catch (e: Exception) {
                 Log.e("Feature1Logic", e.toString())
                 emit(listOf())
