@@ -15,8 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.listRepo("usk2000")
 
-        viewModel.repos.observe(this, {
-            Log.e("MainActivity", it.toString())
+        viewModel.repos.observe(this, { list ->
+            list.forEach {
+                Log.e("MainActivity", it.toString())
+            }
         })
 
     }
