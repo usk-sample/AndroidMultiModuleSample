@@ -40,6 +40,8 @@ dependencies {
     implementation(libs.ktx.corutines.android)
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'androidx.activity:activity-ktx:1.4.0'
+    implementation 'androidx.fragment:fragment-ktx:1.4.0'
     testImplementation(libs.junit.junit)
     androidTestImplementation(libs.android.junit)
     androidTestImplementation(libs.android.espresso.core)

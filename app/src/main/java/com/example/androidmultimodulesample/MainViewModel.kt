@@ -15,11 +15,11 @@ class MainViewModel(
 
     fun listRepo(user: String) {
         viewModelScope.launch {
-            feature1Logic.listRepos()
+            feature1Logic.listRepos(user)
                 .collect {
                     _repos.postValue(it)
                 }
         }
     }
-    
+
 }

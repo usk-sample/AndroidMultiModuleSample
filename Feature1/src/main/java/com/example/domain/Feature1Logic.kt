@@ -14,10 +14,10 @@ class Feature1Logic(
     private val store: DataStore = DataStore()
 ) {
 
-    fun listRepos(): Flow<List<RepoModel>> {
+    fun listRepos(user: String): Flow<List<RepoModel>> {
         return flow {
             try {
-                emit(api.service.listRepos("usk2000").execute().body()!!.map { RepoTranslator.convert(it) })
+                emit(api.service.listRepos(user).execute().body()!!.map { RepoTranslator.convert(it) })
             } catch (e: Exception) {
                 Log.e("Feature1Logic", e.toString())
                 emit(listOf())
