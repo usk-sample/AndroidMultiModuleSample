@@ -1,0 +1,4 @@
+# AndroidMultiModuleSample
+
+# LICENSE
+[LICENSE](LICENSE)
