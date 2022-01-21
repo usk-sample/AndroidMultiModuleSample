@@ -29,8 +29,7 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.ktx.corutines.android)
     testImplementation(libs.junit.junit)
-    androidTestImplementation(libs.android.junit)
-    androidTestImplementation(libs.android.espresso.core)
+    androidTestImplementation(libs.bundles.android.tests)
 
     implementation project(":Infrastructure")
 
